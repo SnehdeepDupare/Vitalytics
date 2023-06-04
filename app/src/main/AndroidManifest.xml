@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Vitalytics"
+
+        tools:targetApi="31" >
+        <activity
+            android:name=".landindPage"
+            android:label="landing"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".entryPage"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".login"
+            android:label="login"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.RUN" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".dashboard"
+            android:label="dashboard"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.RUN" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </activity>
+
+
+<!--   For Vital's Part   -->
+        <activity
+            android:name=".startVitals"
+            android:label="VitalStarting"
+            android:exported="true" />
+
+        <activity
+            android:name=".vitalScanProcess"
+            android:label="VitalProcess"
+            android:exported="true" />
+
+        <activity
+            android:name=".resultVitals"
+            android:label="VitalResult"
+            android:exported="true" />
+
+
+<!--    For Oxygen    -->
+
+        <activity
+            android:name=".oxygenLanding"
+            android:label="oxygenLanding"
+            android:exported="true"/>
+
+        <activity
+            android:name=".oxyyy"
+            android:label="OxygenAlgo"
+            android:exported="true" />
+
+        <activity
+            android:name=".oxygyen"
+            android:label="OxygenLandPage"
+            android:exported="true" />
+
+        <activity
+            android:name=".oxygenResult"
+            android:exported="true" />
+
+
+<!--    For Heart Disease    -->
+
+        <activity
+            android:name=".heartLanding"
+            android:exported="true" />
+
+        <activity
+            android:name=".heartWorking"
+            android:exported="true" />
+
+        <activity android:name=".heartResult"
+            android:exported="true" />
+
+
+<!--    For Blood Pressure    -->
+
+        <activity android:name=".bloodLanding"
+            android:exported="true" />
+
+<!--        <activity android:name=".bloodWorking"-->
+<!--            android:exported="true" />-->
+
+        <activity android:name=".bloodResult"
+            android:exported="true" />
+
+<!--    For Stress    -->
+
+        <activity android:name=".stressLanding"
+            android:exported="true" />
+    </application>
+
+</manifest>
